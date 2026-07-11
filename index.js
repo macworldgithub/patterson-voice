@@ -11230,12 +11230,12 @@ const OPENAI_INPUT_SAMPLE_RATE = Number(
 // 500ms -> 650ms) to make the server less trigger-happy about deciding the
 // caller has started speaking — this is one part of the fix for the agent
 // cutting itself off. Still fully overridable via env vars.
-const OPENAI_VAD_THRESHOLD = Number(process.env.OPENAI_VAD_THRESHOLD || 0.6);
+const OPENAI_VAD_THRESHOLD = Number(process.env.OPENAI_VAD_THRESHOLD || 0.8);
 const OPENAI_VAD_PREFIX_PADDING_MS = Number(
   process.env.OPENAI_VAD_PREFIX_PADDING_MS || 300,
 );
 const OPENAI_VAD_SILENCE_DURATION_MS = Number(
-  process.env.OPENAI_VAD_SILENCE_DURATION_MS || 650,
+  process.env.OPENAI_VAD_SILENCE_DURATION_MS || 2000,
 );
 
 // Hint to OpenAI about the acoustic environment. "far_field" suits a
